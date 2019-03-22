@@ -179,9 +179,9 @@ def player_numbers(team)
   array = []
   game_hash.collect do |location, team_data|
     team_data.collect do |attribute, data|
-      if attribute == :team
-        binding.pry
+      if attribute == :team_name
         if data == team
+          binding.pry
         end
       end
     end
