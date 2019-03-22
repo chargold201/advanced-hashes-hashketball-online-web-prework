@@ -182,6 +182,7 @@ def player_numbers(team)
       if attribute == :team
         if data == team
           binding.pry
+        end
       end
     end
   end
