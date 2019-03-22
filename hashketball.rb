@@ -196,17 +196,19 @@ def player_numbers(team)
 end
 
 def player_stats(player)
+  stats = {}
   game_hash.collect do |location, team_data|
     team_data.collect do |attribute, data|
       if attribute == :players
         data.collect do |name, player_data|
           if name == player
+            stats = player_data
           end
         end
       end
     end
   end
-  player_data
+  stats
 end
 
 def big_shoe_rebounds
