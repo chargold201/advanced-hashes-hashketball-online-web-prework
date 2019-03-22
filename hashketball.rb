@@ -184,7 +184,6 @@ def player_numbers(team)
       end
     end
   end
-  array
 end
 
 def big_shoe_rebounds
