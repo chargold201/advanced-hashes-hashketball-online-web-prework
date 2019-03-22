@@ -201,8 +201,7 @@ def player_stats(player)
     team_data.collect do |attribute, data|
       if attribute == :players
         data.collect do |name, player_data|
-          if name == :player
-            binding.pry
+          if name.to_s == player
             stats = player_data
           end
         end
