@@ -213,6 +213,7 @@ end
 
 def big_shoe_rebounds
   biggest_shoe = 0
+  rebounds = ""
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -235,7 +236,7 @@ def big_shoe_rebounds
           player_data.each do |player_attribute, personal_data|
             if player_attribute == :shoe
               if personal_data == biggest_shoe
-                game_hash[location][attribute][name][:rebounds]
+                rebounds = game_hash[location][attribute][name][:rebounds]
               end
             end
           end
@@ -243,4 +244,5 @@ def big_shoe_rebounds
       end
     end
   end
+  rebounds
 end
