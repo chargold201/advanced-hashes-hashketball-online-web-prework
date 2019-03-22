@@ -182,7 +182,7 @@ def player_numbers(team)
         data.collect do |name, player_data|
           player_data.collect do |attribute, data|
             if attribute == number
-              number
+              data
             end
           end
         end
