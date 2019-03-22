@@ -200,6 +200,7 @@ def player_stats(player)
     team_data.collect do |attribute, data|
       if attribute == :players
         data.collect do |name, player_data|
+          if name == player
           return player_data
         end
       end
