@@ -201,7 +201,6 @@ def player_stats(player)
       if attribute == :players
         data.collect do |name, player_data|
           if name == player
-          return player_data
           end
         end
       end
