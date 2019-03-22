@@ -195,6 +195,18 @@ def player_numbers(team)
   array
 end
 
+def player_stats(player)
+  game_hash.collect do |location, team_data|
+    team_data.collect do |attribute, data|
+      if attribute == :players
+        data.collect do |name, player_data|
+          return player_data
+        end
+      end
+    end
+  end
+end
+
 def big_shoe_rebounds
   biggest_shoe = 0
   game_hash.each do |location, team_data|
