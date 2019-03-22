@@ -176,7 +176,15 @@ def team_names
 end
 
 def player_numbers(team)
-  
+  game_hash.collect do |location, team_data|
+    team_data.collect do |attribute, data|
+      if attribute == players
+        data.collect do |name, player_data|
+          
+        end
+      end
+    end
+  end
 end
 
 def big_shoe_rebounds
