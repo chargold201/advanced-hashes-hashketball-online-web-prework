@@ -180,7 +180,7 @@ def player_numbers(team)
   game_hash.collect do |location, team_data|
     team_data.collect do |attribute, data|
       if :team == team
-        team
+        binding.pry
       end
     end
   end
