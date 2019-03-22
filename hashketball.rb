@@ -178,10 +178,10 @@ end
 def player_numbers(team)
   game_hash.collect do |location, team_data|
     team_data.collect do |attribute, data|
-      if attribute == players
+      if attribute == :players
         data.collect do |name, player_data|
           player_data.collect do |attribute, data|
-            if attribute == number
+            if attribute == :number
               data
             end
           end
