@@ -185,6 +185,7 @@ def player_numbers(team)
             player_data.collect do |attribute, data|
               if attribute == :number
                 array << data
+              end
             end
           end
         end
